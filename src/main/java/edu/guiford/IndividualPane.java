@@ -52,7 +52,7 @@ private Button submitButton;
 
         
         //get the path of the file that contains the image we want to display
-        File avatar = new File("avatar.png");
+        File avatar = new File(getClass().getResource("avatar.png").getPath());
         //Step 2: Instantiate the imageView attribute with the image we want to display
         //URI stantard for Uniform Resource Identifier and it is similar to a URL
         avatarView = new ImageView(avatar.toURI().toString());
@@ -62,10 +62,10 @@ private Button submitButton;
         emailLabel = new Label("Email: " + individual.getEmail());
         phoneLabel = new Label("Phone: " + individual.getPhone());
 
-        //add the labels to the pane
-        this.add(nameLabel, 0, 0);
-        this.add(emailLabel, 0, 1);
-        this.add(phoneLabel, 0, 2);
+        // //add the labels to the pane
+        // this.add(nameLabel, 0, 0);
+        // this.add(emailLabel, 0, 1);
+        // this.add(phoneLabel, 0, 2);
 
 
         //add a label to the pane
